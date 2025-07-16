@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DrPet.Data.Migrations
 {
     [DbContext(typeof(VetDbContext))]
-    [Migration("20250716144751_AddedPhotoOptionToEmployee")]
+    [Migration("20250716155138_AddedPhotoOptionToEmployee")]
     partial class AddedPhotoOptionToEmployee
     {
         /// <inheritdoc />

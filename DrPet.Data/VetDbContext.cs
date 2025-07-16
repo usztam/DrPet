@@ -25,13 +25,7 @@ namespace DrPet.Data
         public VetDbContext(DbContextOptions<VetDbContext> options) : base(options)
         {
         }
-
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-
-        //}
-
+                
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Ownership: composite PK + relationships
