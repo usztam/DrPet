@@ -18,10 +18,11 @@
                    asp-page="/Doctor/Details"
                    asp-route-id="@d.Id">
                     <h5>@d.Name</h5>
-                    <img src="@d.PhotoUrl"
+                    <div><img src="@d.PhotoUrl"
                          class="rounded-circle me-3"
                          style="width:60px;height:60px;object-fit:cover;"
                          alt="@d.Name" />
+                    </div>
                     <p class="text-muted">@d.Description</p>
                 </a>
             }

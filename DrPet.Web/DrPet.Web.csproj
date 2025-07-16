@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\doctor0.avif" />
+    <None Include="wwwroot\images\doctor1.avif" />
+    <None Include="wwwroot\images\doctor2.avif" />
+    <None Include="wwwroot\images\doctor3.avif" />
+    <None Include="wwwroot\images\veterinary_background.avif" />
+    <None Include="wwwroot\images\veterinary_background2.avif" />
+    <None Include="wwwroot\images\veterinary_background3.avif" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.7" />
   </ItemGroup>
