@@ -1,0 +1,41 @@
+﻿@page "{year:int}/{month:int}"
+@model OperatingHoursModel
+@{
+    ViewData["Title"] = "Operating Hours";
+}
+
+<h1>Operating Hours – @Model.Month/@Model.Year</h1>
+
+<div class="mb-3 d-flex justify-content-between">
+    <a class="btn btn-outline-primary"
+       asp-page="/OperatingHours/Index"
+       asp-route-year="@Model.Prev.Year"
+       asp-route-month="@Model.Prev.Month">← Previous Month</a>
+    <a class="btn btn-outline-primary"
+       asp-page="/OperatingHours/Index"
+       asp-route-year="@Model.Next.Year"
+       asp-route-month="@Model.Next.Month">Next Month →</a>
+</div>
+
+<div class="row">
+    @foreach (var day in Model.Days)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-header fw-bold">
+                    @day.Date: @day.Date.DayOfWeek
+                </div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var duty in day.Duties)
+                    {
+                        <li class="list-group-item">
+                            @duty.StartTime – @duty.EndTime<br />
+                            <strong>@duty.Employee.Name</strong><br />
+                            <small class="text-muted">@duty.Employee.Description</small>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</div>

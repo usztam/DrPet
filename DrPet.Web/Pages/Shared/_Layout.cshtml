@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] – DrPet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
+        <div class="container">
+            <a class="navbar-brand" asp-page="/Index">DrPet</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link"
+                       asp-page="/OperatingHours/Index"
+                       asp-route-year="@(DateTime.Today.Year)"
+                       asp-route-month="@(DateTime.Today.Month)">
+                        Operating Hours
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>

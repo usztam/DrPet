@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+    var doctors = Model.Doctors;
+    var schedule = Model.Schedule;
+}
+
+<h1 class="mb-4">Welcome to DrPet</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Doctors in Practice</h2>
+        <div class="list-group">
+            @foreach (var d in doctors)
+            {
+                <a class="list-group-item list-group-item-action"
+                   asp-page="/Doctor/Details"
+                   asp-route-id="@d.Id">
+                    <h5>@d.Name</h5>
+                    <p class="text-muted">@d.Description</p>
+                </a>
+            }
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <h2>This Week’s Appointments</h2>
+        <table class="table table-sm table-bordered">
+            <thead class="table-light">
+                <tr><th>Day</th><th>From</th><th>To</th><th>Doctor</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var duty in schedule.Duties)
+                {
+                    <tr>
+                        <td>@duty.Day</td>
+                        <td>@duty.StartTime</td>
+                        <td>@duty.EndTime</td>
+                        <td>@duty.Employee.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
