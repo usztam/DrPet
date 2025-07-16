@@ -12,6 +12,7 @@ public class DoctorDetailsModel : PageModel
     public int Id { get; private set; }
     public string Name { get; private set; }
     public string Description { get; private set; }
+    public string? PhotoUrl { get; private set; }
     public IEnumerable<DrPet.Data.Entities.DoctorDuty> UpcomingDuties { get; private set; }
 
     public DoctorDetailsModel(IEmployeeService es, IDoctorDutyService dds)
@@ -29,6 +30,7 @@ public class DoctorDetailsModel : PageModel
 
         Name = doc.Name;
         Description = doc.Description;
+        PhotoUrl = doc.PhotoUrl;
 
         var today = DateTime.Today;
         var end = today.AddDays(30);

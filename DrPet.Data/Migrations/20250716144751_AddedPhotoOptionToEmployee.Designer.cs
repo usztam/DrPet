@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DrPet.Data.Migrations
 {
     [DbContext(typeof(VetDbContext))]
-    [Migration("20250716104555_NewCleanMigration")]
-    partial class NewCleanMigration
+    [Migration("20250716144751_AddedPhotoOptionToEmployee")]
+    partial class AddedPhotoOptionToEmployee
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -97,6 +97,9 @@ namespace DrPet.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Role")

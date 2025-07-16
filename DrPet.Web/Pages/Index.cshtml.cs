@@ -25,7 +25,8 @@ public class IndexModel : PageModel
         {
             Id = d.Id,
             Name = d.Name,
-            Description = d.Description
+            Description = d.Description,
+            PhotoUrl = d.PhotoUrl
         }).ToList();
 
         // This week’s schedule

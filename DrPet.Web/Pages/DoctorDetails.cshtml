@@ -3,7 +3,14 @@
 @{
     ViewData["Title"] = "Doctor Details";
 }
-
+<div class="text-center mb-4">
+    <img src="@Model.PhotoUrl"
+         class="rounded-circle"
+         style="width:150px;height:150px;object-fit:cover;"
+         alt="@Model.Name" />
+    <h1 class="mt-3">@Model.Name</h1>
+    <p class="lead">@Model.Description</p>
+</div>
 <h1>@Model.Name</h1>
 <p class="lead">@Model.Description</p>
 

@@ -12,6 +12,7 @@ namespace DrPet.Data.Entities
         public string Name { get; set; }
         public string Role { get; set; }
         public string? Description { get; set; }
+        public string? PhotoUrl { get; set; }
 
         public ICollection<DoctorDuty> DoctorDuties { get; set; } = new List<DoctorDuty>();
         public ICollection<Treatment> Treatments { get; set; } = new List<Treatment>();

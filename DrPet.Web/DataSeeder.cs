@@ -21,13 +21,13 @@ public static class DataSeeder
         var doctors = new[]
         {
             new Employee { Name = "Dr. Alice Smith", Role = "Doctor", Description = "A gentle expert in internal medicine and senior pet care. " 
-                + "Is beloved for her calming presence and compassionate approach" },
+                + "Is beloved for her calming presence and compassionate approach", PhotoUrl = "~/Pages/Shared/images/doctor0.avif" },
             new Employee { Name = "Dr. Bob Jones", Role = "Doctor", Description = "Endless patience and a passion for the unusual. " 
-                + "Specializes in exotic animal medicine and avian surgery." },
+                + "Specializes in exotic animal medicine and avian surgery.", PhotoUrl = "~/Pages/Shared/images/doctor1.avif" },
             new Employee { Name = "Dr. Eve Taylor", Role = "Doctor", Description = "Focused on behavior therapy and wellness. " 
-                + "Connects deeply with pets through warmth, intuition, and playful understanding" },
+                + "Connects deeply with pets through warmth, intuition, and playful understanding", PhotoUrl = "~/Pages/Shared/images/doctor2.avif" },
             new Employee { Name = "Dr. Charlie Brown", Role = "Doctor", Description = "Methodical and tech-savvy. " 
-                + "Excels in orthopedic surgery and imaging diagnostics, bringing precision and innovation to every case." }
+                + "Excels in orthopedic surgery and imaging diagnostics, bringing precision and innovation to every case.", PhotoUrl = "~/Pages/Shared/images/doctor3.avif" }
         };
         var assistants = new[]
         {
