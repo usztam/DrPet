@@ -10,8 +10,8 @@ namespace DrPet.Data.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }      // optional long-text
-        public string Dosage { get; set; }           // e.g. “5 mg”, “2 tablets”
+        public string Description { get; set; }      
+        public string Dosage { get; set; }           
 
         public ICollection<TreatmentEntry> TreatmentEntries { get; set; }
             = new List<TreatmentEntry>();

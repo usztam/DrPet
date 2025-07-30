@@ -9,13 +9,13 @@ namespace DrPet.Data.Entities
     public class TreatmentEntry
     {
         public int Id { get; set; }
-        public string Type { get; set; } // could later be enum
+        public string Type { get; set; }
 
         public int? MedicationId { get; set; }
         public Medication Medication { get; set; }
-        public TimeSpan? Length { get; set; } // optional
+        public TimeSpan? Length { get; set; } 
 
-        public int? HistoryEntryId { get; set; } // optional
+        public int? HistoryEntryId { get; set; } 
         public TreatmentEntry HistoryEntry { get; set; }
 
         public string Comment { get; set; }
